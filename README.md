@@ -1,43 +1,49 @@
-# S1.03 – Java Collections #
-### 🎯 Objectives ###
+# S1.03 — Java Collections
 
-The main goal of this task is to practice working with Java collections and related concepts:
+## 🎯 Objectives
+The main goal of this task is to master Java collections and their fundamental operations:
+- **Collection Management**: Creating and modifying collections using `ArrayList`, `HashSet`, and `HashMap`.
+- **Iteration Patterns**: Implementing efficient data traversal using `ListIterator` and `Iterator`.
+- **Data Integrity**: Handling duplicate elements and object comparison logic.
+- **Ordering**: Practicing object sorting through `Comparable` and `Comparator` interfaces.
+- **File I/O**: Reading from and writing to external files for data persistence.
 
-Creating and modifying collections using ArrayList, HashSet, HashMap and ListIterator
+## 📌 Level 1
+- **Exercise 1 — Month List**: Managing an `ArrayList` of months, ensuring correct insertion order, and converting to `HashSet` to verify uniqueness.
+- **Exercise 2 — Reverse List**: Using `ListIterator` to reverse the elements of a list into a new one.
+- **Exercise 3 — Capital Game**: Implementing a game that reads country-capital pairs from a file, stores them in a `HashMap`, and tracks user scores.
 
-Handling duplicate elements and object comparison
+## 🛠️ Technologies
+- Java 21
+- IntelliJ IDEA
+- Git & GitHub
+- Maven
 
-Practicing object sorting (Comparable and Comparator)
+## 🚀 Installation and Execution
 
-Reading from and writing to files
+1. **📂Clone the repository**:
+   ```bash
+   git clone https://github.com/carlasalmeron/S1.03-Java-Collections.git
+   ```
+2. **Setup environment**: Ensure you have Java 25 installed.
+3. **Execution**:
+   The project uses Maven. To run a specific exercise, navigate to the `Level.1` folder and use the following commands:
 
-Implementing simple menus and user interaction
+   ```bash
+   # Navigate to the project folder
+   cd Level.1
 
-## 📌 Level 1 ##
-### Exercise 1 – Duplicates ###
+   # Compile the project
+   mvn clean compile
 
-Create a class named Month with an attribute name to store the name of the month. Add 11 Month objects to an ArrayList, leaving out August. Then insert this month in its correct position and verify that the order of the months is correct.
+   # Run a specific task (e.g., Task 1)
+   mvn exec:java -Dexec.mainClass="Task1.Main"
+   ```
 
-Next, convert the ArrayList into a HashSet and confirm that duplicate elements are not allowed. Finally, iterate over the collection using both a for loop and an Iterator.
-
-### Exercise 2 – ListIterator ###
-
-Create and populate a List. Then create a second list and insert the same elements but in reverse order. Use a ListIterator to read the elements from the first list and add them to the second one.
-
-### Exercise 3 – Capital Game ###
-
-Using the countries.txt file (see resources section), which contains country–capital pairs separated by commas, read all the data and store it in a HashMap<String, String>, where the key is the country name and the value is its capital.
-
-Once the data is loaded, the program should ask for the user’s name and start the game.
-
-The game consists of 10 questions. In each round, a different country is selected randomly from the HashMap, and the user must enter its capital. If the answer is correct (case sensitivity may be considered if needed), one point is added to the score. After the 10 questions, the final score is displayed.
-
-At the end of the game, the program saves the user’s name and score in a file called classificacio.txt.
-
-## 🛠️ Technologies ##
-
-IntelliJ IDEA
-
-Java 25
-
-Git & GitHub
+   *Manual compilation (if Maven is not in PATH):*
+   ```cmd
+   # From inside the Level.1 folder
+   javac -d bin src/main/java/Task1/*.java
+   java -cp bin Task1.Main
+   ```
+4. **Tests**: Manual verification via the interactive menus and file output checks.
