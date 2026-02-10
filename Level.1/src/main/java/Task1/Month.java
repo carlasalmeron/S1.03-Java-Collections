@@ -25,6 +25,7 @@ public class Month {
         return Objects.hash(name);
     }
 
+    @Override
     public String toString () {
         return "Month: " + this.name;
     }
