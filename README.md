@@ -25,7 +25,7 @@ The main goal of this task is to master Java collections and their fundamental o
    ```bash
    git clone https://github.com/carlasalmeron/S1.03-Java-Collections.git
    ```
-2. **Setup environment**: Ensure you have Java 25 installed.
+2. **Setup environment**: Ensure you have Java 21 installed.
 3. **Execution**:
    The project uses Maven. To run a specific exercise, navigate to the `Level.1` folder and use the following commands:
 
